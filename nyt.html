@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYT API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/nyt.css">
+    <script defer src="js/nyt.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row pt-5 pb-2 header">
+            <div class="col-12">
+                <h1 class="text-center">The New York Times Top Stories</h1>
+                <div class="d-flex justify-content-end"><a href="https://developer.nytimes.com"><img src="https://developer.nytimes.com/files/poweredby_nytimes_150c.png?v=1583354208341" alt="New York Times API logo"></a></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-info mt-5 text-center" role="alert">
+                    In order to run this application you must have an API key. Please follow the instructions in the README.md file. 
+                  </div>
+            </div>
+        </div>
+        <div class="row mb-5 mt-4 pt-3 pb-3 d-flex justify-content-center ">
+            <div class="col-6 col-md-3">
+                <select class="form-select" aria-label="select a news section" id="section">
+                    <option value="home">Home</option>
+                    <option value="arts">Arts</option>
+                    <option value="business">Business</option>
+                    <option value="food">Dining</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="health">Health</option>
+                    <option value="magazine">Magazine</option>
+                    <option value="us">National</option>
+                    <option value="opinion">Opinion</option>
+                    <option value="politics">Politics</option>
+                    <option value="realestate">Real Estate</option>
+                    <option value="science">Science</option>
+                    <option value="sports">Sports</option>
+                    <option value="technology">Technology</option>
+                    <option value="world">World</option>
+                </select>
+            </div>
+            <div class="col-2 col-md-1">
+                <button class="btn btn-secondary me-4" id="refreshBtn">Refresh</button>
+            </div>
+        </div>
+        <div class="row mt-4 d-flex justify-content-center">
+            <div class="col-12 spinner-border" id="spinner" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center" id="articleCount">
+                <!-- where the number of results will be displayed for the categories-->
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center px-4" id="news">
+            <!-- where the news stories will be displayed -->
+        </div>
+    </div>
+</body>
+
+</html>
